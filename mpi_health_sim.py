@@ -12,8 +12,6 @@ def sim_lifetimes_mpi():
     rank = comm.Get_rank()
     size = comm.Get_size()
 
-    print('starting job on process %d of %d cores',% (rank, size))
-
     t0 = time.time()
 
     # Set model parameters
@@ -27,8 +25,6 @@ def sim_lifetimes_mpi():
     # Evenly distribute number of simulation runs across processes
     S = int(1000 / size) # Set the number of lives to simulate
     T = int(4160) # Set the number of periods for each simulation
-
-    print('simulating %d lives on process %d',%(S,rank))
 
     np.random.seed(rank)
 

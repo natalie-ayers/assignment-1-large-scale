@@ -11,4 +11,7 @@ module load python/anaconda-2019.03
 module load intelmpi/2018.2.199+intel-18.0
 
 # Run the python program with mpirun
-for i in {1..2}; do mpirun -n $i python3 mpi_health_sim.py >> mpi_health_sim.out; done
+for i in {1..2} 
+do 
+    mpirun -n $i python3 mpi_health_sim.py >> mpi_health_sim.out
+done
