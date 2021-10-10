@@ -15,6 +15,3 @@ for i in {1..2}
 do
     mpirun -n $i python3 mpi_health_sim.py >> mpi_health_sim.out
 done
-
-# Wait until all simultaneous mpiruns are done
-wait
