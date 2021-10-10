@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --job-name=mpi_multi_job
-#SBATCH --ntasks=210
+#SBATCH --ntasks=6
 #SBATCH --partition=broadwl
 #SBATCH --constraint=fdr
 #SBATCH --account=macs30123
