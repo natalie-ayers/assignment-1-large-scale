@@ -37,6 +37,8 @@ def sim_lifetimes_mpi():
   
     print(rank, size, S, time_elapsed)
 
+    return
+
 def main():
     sim_lifetimes_mpi()
 
