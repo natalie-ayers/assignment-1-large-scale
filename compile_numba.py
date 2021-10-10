@@ -16,3 +16,5 @@ def loop_lifetimes(S, T, z_0, rho, mu, eps_mat, z_mat):
     return z_mat
 
 cc.compile()
+
+print('successfully compiled life_loop function')
