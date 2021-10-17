@@ -22,7 +22,8 @@ def loop_rho_vals(S, T, z_0, rho_rank, mu, eps_mat, z_mat, rho_mat):
     min_life_0_period = np.full((S,2), T, dtype=np.int16)
     min_life_0_period[:,0] = np.arange(S)
 
-    for person, col in enumerate(z_mat.T):
+    for person in range(z_mat.shape[0]):
+      col = z_mat[person,:]
       #print('considering person',person)
       for col_idx, z in enumerate(col):
         if z <= 0:

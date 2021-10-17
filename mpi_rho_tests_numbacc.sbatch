@@ -7,6 +7,7 @@
 #SBATCH --account=macs30123
 
 # Load Python and MPI modules
+module load cuda
 module load python/anaconda-2019.03
 module load intelmpi/2018.2.199+intel-18.0
 
