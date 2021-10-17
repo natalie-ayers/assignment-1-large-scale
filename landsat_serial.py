@@ -1,6 +1,7 @@
 # Import required libraries
 import rasterio
 import numpy as np
+import time
 
 
 t0 = time.time()
