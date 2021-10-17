@@ -18,3 +18,20 @@ The speedup isn't linear because it is limited by the serial components of the p
 
 # 2
 ## (a)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Sources:
+
+https://thispointer.com/find-max-value-its-index-in-numpy-array-numpy-amax/
