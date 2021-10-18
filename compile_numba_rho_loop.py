@@ -30,7 +30,6 @@ def loop_rho_vals(S, T, z_0, rho_rank, mu, eps_mat, z_mat, rho_mat):
     min_life_0_period = np.full((S,2), T, dtype=np.int16)
     min_life_0_period[:,0] = np.arange(S)
 
-    print('z_mat.shape[1]',z_mat.shape[1])
     for person in range(z_mat.shape[1]):
       col = z_mat[person,:]
       #print('considering person',person)
@@ -47,6 +46,5 @@ def loop_rho_vals(S, T, z_0, rho_rank, mu, eps_mat, z_mat, rho_mat):
     #print('current row of rho mat:',rho_mat[rho_idx,:])
 
   return rho_mat
-
 
 cc.compile()

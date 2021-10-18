@@ -12,11 +12,10 @@ def test_rho_effects():
     comm = MPI.COMM_WORLD
     rank = comm.Get_rank()
     size = comm.Get_size()
-    print()
     t0 = time.time()
 
     # Set model parameters
-    rho_arr = np.linspace(-0.95, 0.95, num=20)
+    rho_arr = np.linspace(-0.95, 0.95, num=40)
     mu = 3.0
     sigma = 1.0
     z_0 = mu
@@ -24,7 +23,7 @@ def test_rho_effects():
     # Set simulation parameters, draw all idiosyncratic random shocks,
     # and create empty containers
     # Evenly distribute number of simulation runs across processes
-    rho_rank = rho_arr[rank:rank+20]
+    rho_rank = rho_arr[20*rank:(20*rank)+20]
     S = int(1000) # Set the number of lives to simulate
     T = int(4160) # Set the number of periods for each simulation
 
