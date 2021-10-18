@@ -15,7 +15,7 @@ def test_rho_effects():
     t0 = time.time()
 
     # Set model parameters
-    rho_arr = np.linspace(-0.95, 0.95, num=40)
+    rho_arr = np.linspace(-0.95, 0.95, num=200)
     mu = 3.0
     sigma = 1.0
     z_0 = mu
