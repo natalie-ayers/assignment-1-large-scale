@@ -44,9 +44,9 @@ def test_rho_effects():
 
     time_elapsed = time.time() - t0
     
-
-    print('rank, size, num_lives (S), time_elapsed, rho_mat')
-    print(rank, size, S, time_elapsed, final_rho_mat)
+    #print('rank, size, num_lives (S), time_elapsed, rho_mat')
+    print(rank, size, S, time_elapsed)
+    print(final_rho_mat)
 
 def main():
     test_rho_effects()
