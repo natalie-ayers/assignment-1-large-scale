@@ -12,7 +12,7 @@ def test_rho_effects():
     comm = MPI.COMM_WORLD
     rank = comm.Get_rank()
     size = comm.Get_size()
-
+    print()
     t0 = time.time()
 
     # Set model parameters
@@ -48,3 +48,9 @@ def test_rho_effects():
 
     print('rank, size, num_lives (S), time_elapsed, rho_mat')
     print(rank, size, S, time_elapsed, final_rho_mat)
+
+def main():
+    test_rho_effects()
+
+if __name__ == '__main__':
+    main()
