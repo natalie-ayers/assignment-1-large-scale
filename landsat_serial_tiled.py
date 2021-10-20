@@ -4,7 +4,7 @@ import numpy as np
 import time
 import sys
 
-tile = sys.argv[1]
+tile = int(sys.argv[1])
 print('factor to increase data size',tile)
 
 def serial_processing(tiles):
