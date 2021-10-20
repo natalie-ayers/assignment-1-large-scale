@@ -13,17 +13,29 @@ By pre-compiling with numba, we saw a speedup from 3.43 seconds to 0.46 seconds,
 
 ## (c)
 
-The speedup isn't linear because it is limited by the serial components of the process, namely _____
+The speedup isn't linear because it is limited by the serial components of the process, namely the need to create our initial objects (eps_mat and empty z_mat). 
 
 
 # 2
 ## (a)
+  
+The mean time for each core to process its 20 values of $\rho$ over 1000 lifetimes was 1.638 seconds.  
+  
+## (b)
+  
+![Time to Reach Negative Health by Persistence](rho_tests.png)  
 
+## (c)
+  
+The optimal persistence, $\rho$ is 0: with a 0 persistence, it takes approximately 1450 periods to reach a point where health drops below 0. 
+  
 
+# 3
+## (a)
 
-
-
-
+Running on a single CPU core on Midway, the serial code took 1.1387 seconds to complete.  
+  
+By contrast, the GPU version
 
 
 

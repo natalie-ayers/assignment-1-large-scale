@@ -5,7 +5,7 @@ import pyopencl as cl
 import pyopencl.array as cl_array
 import pyopencl.clrandom as clrand
 import pyopencl.tools as cltools
-from pyopencl.scan import GenericScanKernel
+from pyopencl.elementwise import ElementwiseKernel
 import matplotlib.pyplot as plt
 
 
@@ -26,7 +26,22 @@ band5 = rasterio.open(
 red = band4.read(1).astype('float64')
 nir = band5.read(1).astype('float64')
 
-# NDVI calculation
-ndvi = (nir - red) / (nir + red)
+red_dev = cl_array.to_device(queue, red)
+nir_dev = cl_array.to_device(queue, nir)
 
-print('time elapsed for GPU NDVI calculation:', time.time() - t0)
+ndvi_dev = cl_array.empty_like(red_dev)
+
+
+# NDVI calculation
+ndvi_knl = ElementwiseKernel(ctx,
+          "double *N, double *R, double *V",
+          "V[i] = (N[i] - R[i]) / (N[i] + R[i])"
+          )
+
+ndvi_knl(nir_dev, red_dev, ndvi_dev)
+
+ndvi = ndvi_dev.get()
+print(ndvi.shape)
+print(ndvi)
+
+print("Time Elapsed (Elementwise Map): ", time.time() - t0)
