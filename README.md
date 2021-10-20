@@ -21,7 +21,7 @@ The speedup isn't linear because it is limited by the serial components of the p
 # 2
 ## (a)
   
-The mean time for each core to process its 20 values of $\rho$ over 1000 lifetimes was 1.638 seconds (run using mpi_rho_tests_numbacc.sbatch and reported in mpi_rho_tests_numbacc.out, with final calculations performed in assignment_1_assoc_tasks.ipynb).    
+The mean time for each core to process its 20 values of persistence over 1000 lifetimes was 1.638 seconds (run using mpi_rho_tests_numbacc.sbatch and reported in mpi_rho_tests_numbacc.out, with final calculations performed in assignment_1_assoc_tasks.ipynb).    
   
 ## (b)
   
@@ -31,7 +31,7 @@ The mean time for each core to process its 20 values of $\rho$ over 1000 lifetim
 
 ## (c)
   
-The optimal persistence, $\rho$ is 0: with a 0 persistence, it takes approximately 1450 periods to reach a point where health drops below 0.   
+The optimal persistence, persistence is 0: with a 0 persistence, it takes approximately 1450 periods to reach a point where health drops below 0.   
   
 
 # 3
