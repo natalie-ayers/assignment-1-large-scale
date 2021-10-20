@@ -43,7 +43,7 @@ This is far slower than the original CPU implementation, and it is likely due in
   
 ## (c)
 
-
+When I perform the parallel NDVI calculation on a GPU using a 10x and 20x size increase, I find it takes 0.9457 seconds for the 10x increase and 1.0716 seconds for the 20x increase.
 
 
 
