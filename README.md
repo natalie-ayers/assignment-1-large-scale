@@ -13,7 +13,7 @@ By pre-compiling with numba, we saw a speedup from 3.43 seconds to 0.46 seconds,
 
 ## (c)
 
-The speedup isn't linear because it is limited by the serial components of the process, namely the need to create our initial objects (eps_mat and empty z_mat). 
+The speedup isn't linear because it is limited by the serial components of the process, namely the need to create our initial objects (eps_mat and empty z_mat), as predicted by Amdahl's Law. We're also not increasing the size of the data, which would allow us to see closer to linear speed-up according to Gustafson-Barsis's Law. 
 
 
 # 2
@@ -35,7 +35,13 @@ The optimal persistence, $\rho$ is 0: with a 0 persistence, it takes approximate
 
 Running on a single CPU core on Midway, the serial code took 1.1387 seconds to complete.  
   
-By contrast, the GPU version
+By contrast, the GPU version on Midway took 4.668 seconds to complete.   
+
+## (b)
+  
+This is far slower than the original CPU implementation, and it is likely due in part to needing to send our raster arrays to the GPU for processing, then receive them back to the CPU. Transferring data to and from GPUs is a known limitation on speed, so in this case it seems not worth the increased parallelizability the GPU offers.  
+  
+## (c)
 
 
 

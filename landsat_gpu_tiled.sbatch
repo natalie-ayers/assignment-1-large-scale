@@ -15,7 +15,7 @@
 module load cuda
 module load python/anaconda-2019.03
 
-for i in {10,20}
+for i in 10 20
 do
     python3 ./landsat_gpu_tiled.py $i
 done
