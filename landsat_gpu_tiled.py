@@ -53,7 +53,7 @@ def landsat_gpu(tiles):
 
 
 def main():
-    serial_processing(tiles=tile)
+    landsat_gpu(tiles=tile)
 
 if __name__ == '__main__':
     main()
