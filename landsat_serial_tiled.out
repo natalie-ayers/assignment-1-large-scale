@@ -1,0 +1,4 @@
+factor to increase data size 10
+time elapsed for serial NDVI calculation with  10 x increase: 0.697288990020752
+factor to increase data size 20
+time elapsed for serial NDVI calculation with  20 x increase: 1.2265863418579102
