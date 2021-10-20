@@ -14,5 +14,5 @@ module load intelmpi/2018.2.199+intel-18.0
 # Run the python program with mpirun
 for i in 10 20
 do
-    mpirun -n 1 python3 ./landsat_serial_tiled.py $i > ./landsat_serial_tiled.out 
+    mpirun -n 1 python3 ./landsat_serial_tiled.py $i >> ./landsat_serial_tiled.out 
 done
